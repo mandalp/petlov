@@ -3,7 +3,9 @@ on:
   workflow_dispatch:
     inputs:
       spec:
-        default: cypress/e2e/*
+        description: 'Cypress spec to run'
+        required: false
+        default: 'cypress/e2e/*'
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
